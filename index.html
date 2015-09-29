@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+	<head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" id="viewport">
+    	
+    	<title>Test BlockHeights Jquery Plugin</title>
+        <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'/>
+    	<style>
+    		html,
+    		body {
+    			font-family: 'Open Sans', serif;
+    			background: #999;
+    			height: 100%;
+    			width: 100%;
+    			padding: 0;
+    			margin: 0;
+    		}
+    		
+    		.test {
+				padding: 10px;	
+    		}
+    		
+    		.test-content{
+    			background: white;
+    			padding: 10px;
+    		}
+    	</style>
+    	
+    	<?php wp_head(); ?>
+    </head>
+    <body>
+    	<div class="container">
+	    	<div class="row">
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test<br/>test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test<br/>test<br/>test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test<br/>test<br/>test<br/>test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test<br/>test
+		    		</section>
+		    	</div>
+		    	<div class="test col-sm-3">
+		    		<section class="test-content">
+		    			test<br/>test
+		    		</section>
+		    	</div>
+    		</div>
+    	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="blockHeights.js"></script>
+	<script>
+	jQuery( document ).ready(function( $ ) {
+		$('.test-content').blockHeights({
+			'breakPoint': 768
+		});
+	});
+
+	$(window).resize(function() {
+		$('.test-content').blockHeights({
+			'breakPoint': 768
+		});
+	});
+	</script>    
+    </body>
+</html>
