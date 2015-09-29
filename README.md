@@ -2,7 +2,7 @@
 include script
 `<script src="js/blockHeights.js"></script>`
 Then use the function:
-`$(ELEMENT).blockHeights();` or `$(ELEMENT).blockHeights(400);`
+`$(ELEMENT).blockHeights();` or `$(ELEMENT).blockHeights({'breakPoint':768});`
 The plugin depends on jQuery.
 
 ### Version
